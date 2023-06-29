@@ -1,0 +1,495 @@
+/* Importer les polices d'écriture */
+
+@font-face {
+	font-family: 'Futura';
+	src: url('fonts/futura_book_font-webfont.woff') format('woff'),
+		url('/fonts/futura_book_font-webfont.woff2') format('woff2'),
+        url('/fonts/futura_medium_bt-webfont.woff') format('woff'),
+        url('/fonts/futura_medium_bt-webfont.woff2') format('woff2'),
+        url('/fonts/futura-light-webfont.woff') format('woff'),
+        url('/fonts/futura-light-webfont.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: 'NimbusRomno';
+	src: url('fonts/nimbusromno9l-regita-webfont.woff') format('woff'),
+		url('/fonts/nimbusromno9l-regita-webfont.woff2') format('woff2'),
+        url('/fonts/nimbus-sans-l.regular-webfont.woff') format('woff'),
+        url('/fonts/nimbus-sans-l.regular-webfont.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('fonts/sofia_pro_regular-webfont.woff') format('woff'),
+        url('/fonts/sofia_pro_regular-webfont.woff2') format('woff2'),
+        url('/fonts/sofia_pro_semibold-webfont.woff') format('woff'),
+        url('/fonts/sofia_pro_semibold-webfont.woff2') format('woff2'),
+        url('/fonts/sofia-pro-light-webfont.woff') format('woff'),
+        url('/fonts/sofia-pro-light-webfont.woff2') format('woff2');
+}
+
+/* Enlève les effets des liens */
+main a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Enlève les puces sur les listes */
+ul{
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Sofia', sans-serif;
+    overflow-x: hidden; /*cacher scrollbar horizontale */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#liensPrincipaux a:first-child{
+    border-bottom: black 1px solid;
+}
+
+/* HEADER  */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    color: gray;
+    font-style: italic;
+    font-size: 0.7em;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+header p{
+    margin-left: 10%;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header nav a{
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: gray;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 960px){
+    header{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 560px){
+    header nav{
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header p{
+        margin-left: 0;
+    }
+}
+
+h1{
+    margin-top: 75px;
+}
+
+/* Section menu */
+#menu nav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 960px){
+    menu{
+        flex-wrap: wrap;
+    }
+}
+
+#menu nav div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu nav div{
+    gap:2rem;
+}
+
+/* fonts */
+#collections h2, #promos h2, #follow h2{
+    font-family: 'NimbusRomno', sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 0px;
+    margin-bottom: 0.5em;
+}
+
+#collections p:first-child, #promos p:first-child, #follow p:first-child{
+    font-family: 'Futura', sans-serif;
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+
+/* section principale */
+#banniere img{
+    display: flex;
+    width: 100%;
+}
+
+#banniere2{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+#banniere2 img{
+    width: 100%;
+}
+
+@media screen and (max-width: 960px){
+    #banniere2{
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* Section featured */
+#featured h2{
+    display: flex;
+    justify-content: left;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+#contenuPetitMenu{
+    border-top: #cbcbcb 1px solid;
+    border-bottom: #cbcbcb 1px solid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+#contenuPetitMenu a{
+    color: gray;
+    font-size: 1em;
+    margin-right: 3em;
+}
+
+#contenuPetitMenu div a:first-child{
+    color: black; 
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+/* Trois points de slide */
+.points{
+    display: flex;
+    gap: 4px;
+}
+
+.point1{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 100%;
+
+}
+.point2{
+    width: 15px;
+    height: 15px;
+    background-color: #cbcbcb;
+    border-radius: 100%;
+}
+.point3{
+    width: 15px;
+    height: 15px;
+    background-color: #cbcbcb;
+    border-radius: 100%;
+}
+
+/* Section follow */
+#follow{
+    margin-top: 4em;
+}
+
+#gallerieCorbeille{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3em;
+    gap: 2em;
+}
+
+#gallerieCorbeille h3{
+    margin-bottom: 0;
+}
+
+.balayette{
+    width: 100%;
+}
+
+.etiquette{
+    position: relative;
+}
+
+.overlayHaut1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 5px 10px;
+    color: #cbcbcb;
+    background-color: rgb(43, 42, 42);
+}
+
+.overlayHaut2{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    margin: 10px;
+    padding: 5px 10px;
+    color: #cbcbcb;
+    background-color: rgb(43, 42, 42);
+}
+
+#logosCorbeille{ /* à défaut de trouver les logos necessaires, réutilisation de ceux du menu */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+}
+
+.prix{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.prix p:first-child{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.prix p:nth-child(2){
+    font-weight: 600;
+}
+
+/* Section collections */
+#collections{
+    margin-top: 4em;
+}
+
+.barreTitre {
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: black;
+    margin: 5px auto;
+}
+
+.paragraphe{
+    margin-bottom: 3em;
+    margin-top: 3em;
+    padding: 0 6em;
+}
+
+#banniere3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1em;
+}
+
+#banniere3 img{
+    width: 100%;
+}
+
+@media screen and (max-width: 960px){
+    #banniere3{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100vw;
+    }
+}
+   
+
+/* Section promotions */
+#promos{
+    margin-top: 4em;
+}
+
+#promos>div{
+    display: flex;
+    text-align: left;
+}
+
+#boutonPromos{
+    background-color: black;
+    color: rgb(206, 206, 206);
+    padding: 15px 30px;
+}
+
+#paragraphePromo{
+    margin-bottom: 4em;
+    margin-top: 3em;
+    padding-right: 1em;
+}
+
+#barreTitrePromo {
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: black
+}
+
+#promos>div{
+    width: 100%;
+}
+
+.moitie img{
+    width: 50vw;
+}
+
+@media screen and (max-width: 960px){
+    #promos>div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    p#paragraphePromo{
+        padding: 0;
+    }
+    .moitie img{
+        margin-top: 10%;
+        width: 100%;
+    }
+    
+}
+
+/* Section follow */
+#follow{
+    margin-top: 4em;
+}
+
+#imagesFollow{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 3em;
+}
+
+#imagesFollow img{
+    width: 100%
+}
+
+@media screen and (max-width: 960px){
+    #imagesFollow{
+        flex-wrap: wrap;
+        max-width: 50vw;
+    }
+    #follow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Section shipping */
+#shipping>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 6em auto 4em auto;
+}
+
+#shipping>div>div{
+    margin: 1em;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+#footerOverlay{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#boutonSub{
+    color: black;
+    background-color: white;
+    font-size: 0.9em;
+    max-width: 80px;
+    padding: 10px;
+    margin: 1em 0 1em 0
+}
+
+.infos a{
+    text-decoration: none;
+    color: white;
+}
+
+.infos ul{
+    text-align: left;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
